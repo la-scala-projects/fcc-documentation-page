@@ -24,6 +24,21 @@ html {
   margin-top: 0;
 }
 
+.fcc-documentation b {
+  font-weight: 600;
+}
+
+.fcc-documentation code {
+  font-family: "Source Code Pro", monospace;
+  font-size: 16px;
+  background-color: #f9f9f9;
+  color: #c69;
+}
+
+.fcc-documentation pre {
+  white-space: pre-wrap;
+}
+
 .page__header {
   display: flex;
   width: 100%;
@@ -56,6 +71,7 @@ html {
   font-size: 1.5rem;
   position: relative;
   margin-bottom: 2rem;
+  font-weight: 600;
 }
 
 .nav-header::before {
@@ -86,7 +102,12 @@ html {
 .nav-link {
   display: flex;
   padding-left: 30px;
+  text-decoration: none;
+  color: #6b717f;
+}
 
+.nav-link:hover {
+  color: #c69;
 }
 
 .page__main-title {
@@ -130,6 +151,21 @@ html {
 .main-section header {
   font-size: 1.5rem;
   margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.highlighted-block__title {
+  font-weight: 600;
+  margin-top: 30px;
+}
+
+.highlighted-block {
+  display: flex;
+  text-wrap: normal;
+  background-color: #f9f9f9;
+  border: 1px solid #d3d3d3;
+  padding: 30px;
+  margin-bottom: 30px;
 }
 
 .footer {
@@ -137,9 +173,10 @@ html {
   flex-direction: column;
   justify-content: flex-end;
   margin-left: 330px;
-  padding: 35px 35px;
+  padding: 10px 35px;
   border-top: 1px solid #d3d3d3;
   z-index: 800;
+  font-size: 12px;
 }
 
 @media (min-width: 960px) {

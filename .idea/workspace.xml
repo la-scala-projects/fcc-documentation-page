@@ -18,8 +18,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/../Technical Documentation/index.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="345">
-                  <caret line="19" column="72" selection-start-line="19" selection-start-column="64" selection-end-line="19" selection-end-column="72" />
+                <state relative-caret-position="267">
+                  <caret line="460" column="8" selection-start-line="460" selection-start-column="8" selection-end-line="460" selection-end-column="8" />
                   <folding>
                     <element signature="e#12223#12229#0" expanded="true" />
                   </folding>
@@ -34,8 +34,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/../Technical Documentation/src/styles/styles.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="93">
-                  <caret line="45" column="21" lean-forward="true" selection-start-line="43" selection-start-column="2" selection-end-line="45" selection-end-column="21" />
+                <state relative-caret-position="365">
+                  <caret line="175" column="13" selection-start-line="175" selection-start-column="13" selection-end-line="175" selection-end-column="13" />
                 </state>
               </provider>
             </entry>
@@ -48,6 +48,8 @@
     <findStrings>
       <find>idea</find>
       <find>&amp;nbsp;</find>
+      <find>Mixins</find>
+      <find>Nesting</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -219,12 +221,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1559482900261</updated>
-      <workItem from="1559482902462" duration="13664000" />
+      <workItem from="1559482902462" duration="18128000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13664000" />
+    <option name="totallyTimeSpent" value="18128000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="795" extended-state="0" />
@@ -273,8 +275,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../Technical Documentation/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="19" column="72" selection-start-line="19" selection-start-column="64" selection-end-line="19" selection-end-column="72" />
+        <state relative-caret-position="267">
+          <caret line="460" column="8" selection-start-line="460" selection-start-column="8" selection-end-line="460" selection-end-column="8" />
           <folding>
             <element signature="e#12223#12229#0" expanded="true" />
           </folding>
@@ -283,8 +285,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../Technical Documentation/src/styles/styles.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="93">
-          <caret line="45" column="21" lean-forward="true" selection-start-line="43" selection-start-column="2" selection-end-line="45" selection-end-column="21" />
+        <state relative-caret-position="365">
+          <caret line="175" column="13" selection-start-line="175" selection-start-column="13" selection-end-line="175" selection-end-column="13" />
         </state>
       </provider>
     </entry>

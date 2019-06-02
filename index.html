@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.0/normalize.css">
-	<link href="https://fonts.googleapis.com/css?family=Source+Code+Pro|Source+Sans+Pro:300,400|Source+Serif+Pro:400,600,700&display=swap"
+	<link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500|Source+Sans+Pro:300,400,600&display=swap"
 	      rel="stylesheet">
 	<link href="src/styles/styles.css" type="text/css" rel="stylesheet">
 	<title>FreeCodeCamp Technical Documentation Page</title>
@@ -103,14 +103,10 @@
 				tells Sass to watch your source files for changes, and re-compile CSS each time
 				you save your Sass. If you wanted to watch (instead of manually build) your <code>input.scss</code> file,
 				you'd just add the watch flag to your command, like so:</p>
-			<pre>
-				<code>sass --watch input.scss output.css</code>
-			</pre>
+				<code class="highlighted-block">sass --watch input.scss output.css</code>
 			<p>You can watch and output to directories by using folder paths as your input and output, and separating
 				them with a colon. In this example:</p>
-			<pre>
-				<code>sass --watch app/sass:public/stylesheets</code>
-			</pre>
+				<code class="highlighted-block">sass --watch app/sass:public/stylesheets</code>
 			<p>Sass would watch all files in the <code>app/sass</code> folder for changes, and compile CSS to the <code>public/stylesheets</code>
 				folder.</p>
 		</article>
@@ -119,47 +115,31 @@
 		<header>Variables</header>
 		<article>
 			<p>Think of variables as a way to store information that you want to reuse throughout your stylesheet. You can
-				store things like colors, font stacks, or any CSS value you think you'll want to reuse. Sass uses the $ symbol
+				store things like colors, font stacks, or any CSS value you think you'll want to reuse. Sass uses the
+				<code>$</code> symbol
 				to make something a variable. Here's an example:</p>
-			<div class="">
-				<p>SCSS</p>
-				<pre>
-					<code>
-$font-stack: Helvetica, sans-serif;
+			<p class="highlighted-block__title">SCSS</p>
+			<pre class="highlighted-block"><code>$font-stack: Helvetica, sans-serif;
 $primary-color: #333;
 
 body {
-	font: 100% $font-stack;
-	color: $primary-color;
-}
-					</code>
-				</pre>
-			</div>
-			<div class="">
-				<p>Sass</p>
-				<pre>
-					<code>
-$font-stack: Helvetica, sans-serif
+ font: 100% $font-stack;
+ color: $primary-color;
+}</code></pre>
+			<p class="highlighted-block__title">Sass</p>
+			<pre class="highlighted-block">
+				<code>$font-stack: Helvetica, sans-serif
 $primary-color: #333
 
 body
-	font: 100% $font-stack
-	color: $primary-color
-}
-					</code>
-				</pre>
-			</div>
-			<div class="">
-				<p>CSS</p>
-				<pre>
-					<code>
-body {
-	font: 100% Helvetica, sans-serif;
-	color: #333;
-}
-					</code>
-				</pre>
-			</div>
+ font: 100% $font-stack
+ color: $primary-color
+}</code></pre>
+			<p class="highlighted-block__title">CSS</p>
+			<pre class="highlighted-block"><code>body {
+ font: 100% Helvetica, sans-serif;
+ color: #333;
+}</code></pre>
 		</article>
 	</section>
 	<section class="main-section" id="Nesting">
@@ -173,70 +153,55 @@ body {
 				generally considered bad practice.</p>
 
 			<p>With that in mind, here's an example of some typical styles for a site's navigation:</p>
-			<div class="">
-				<p>SCSS</p>
-				<pre>
-					<code>
-nav {
-	ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
-
-	li {
-		display: inline-block;
-	}
-
-	a {
-		display: block;
-    padding: 6px 12px;
-    text-decoration: none;
-  }
-}
-					</code>
-				</pre>
-			</div>
-			<div class="">
-				<p>Sass</p>
-				<pre>
-					<code>
-nav
-  ul
-    margin: 0
-    padding: 0
-    list-style: none
-
-  li
-    display: inline-block
-
-  a
-    display: block
-    padding: 6px 12px
-    text-decoration: none
-					</code>
-				</pre>
-			</div>
-			<div class="">
-				<p>CSS</p>
-				<pre>
-					<code>
-nav ul {
+			<p class="highlighted-block__title">SCSS</p>
+			<pre class="highlighted-block"><code>nav {
+ ul {
   margin: 0;
   padding: 0;
   list-style: none;
-}
-nav li {
+ }
+
+ li {
   display: inline-block;
-}
-nav a {
+ }
+
+ a {
   display: block;
   padding: 6px 12px;
   text-decoration: none;
+ }
+}</code></pre>
+			<p class="highlighted-block__title">Sass</p>
+			<pre class="highlighted-block"><code>nav
+ ul
+  margin: 0
+  padding: 0
+  list-style: none
+
+ li
+  display: inline-block
+
+ a
+  display: block
+  padding: 6px 12px
+  text-decoration: none</code></pre>
+			<p class="highlighted-block__title">CSS</p>
+			<pre class="highlighted-block">
+					<code>nav ul {
+ margin: 0;
+ padding: 0;
+ list-style: none;
 }
-					</code>
-				</pre>
-			</div>
+
+nav li {
+ display: inline-block;
+}
+
+nav a {
+ display: block;
+ padding: 6px 12px;
+ text-decoration: none;
+}</code></pre>
 			<p>You'll notice that the <code>ul</code>, <code>li</code>, and <code>a</code> selectors are nested inside the
 				<code>nav</code> selector. This is a great way to organize your CSS and make it more readable.</p>
 		</article>
@@ -262,67 +227,49 @@ nav a {
 				to the web browser.</p>
 			<p>Let's say you have a couple of Sass files, <code>_reset.scss</code> and <code>base.scss</code>. We want to
 				import <code>_reset.scss</code> into <code>base.scss</code>.</p>
-			<div class="">
-				<p>SCSS</p>
-				<pre>
-						<code>
-// _reset.scss
-	html,
-	body,
-	ul,
-	ol {
+			<p class="highlighted-block__title">SCSS</p>
+			<pre class="highlighted-block"><code>// _reset.scss
+ html,
+ body,
+ ul,
+ ol {
     margin:  0;
     padding: 0;
 	}
 
 // base.scss
-	@import 'reset';
-	body {
-    font: 100% Helvetica, sans-serif;
-    background-color: #efefef;
-}
-
-</code>
-					</pre>
-			</div>
-			<div class="">
-				<p>Sass</p>
-				<pre>
-						<code>
-// _reset.sass
-	html,
-	body,
-	ul,
-	ol
-    margin:  0
-    padding: 0
+ @import 'reset';
+ body {
+  font: 100% Helvetica, sans-serif;
+  background-color: #efefef;
+}</code></pre>
+			<p class="highlighted-block__title">Sass</p>
+			<pre class="highlighted-block"><code>// _reset.sass
+ html,
+ body,
+ ul,
+ ol
+  margin:  0
+  padding: 0
 
 // base.sass
-	@import reset
-	body
-    font: 100% Helvetica, sans-serif
-    background-color: #efefef
-						</code>
-					</pre>
-			</div>
-			<div class="">
-				<p>CSS</p>
-				<pre>
-						<code>
-html,
+ @import reset
+ body
+  font: 100% Helvetica, sans-serif
+  background-color: #efefef</code></pre>
+			<p class="highlighted-block__title">CSS</p>
+			<pre class="highlighted-block"><code>html,
 body,
 ul,
 ol {
-  margin:  0;
-  padding: 0;
+ margin:  0;
+ padding: 0;
 }
+
 body {
-  font: 100% Helvetica, sans-serif;
-  background-color: #efefef;
-}
-						</code>
-					</pre>
-			</div>
+ font: 100% Helvetica, sans-serif;
+ background-color: #efefef;
+}</code></pre>
 		</article>
 	</section>
 	<section class="main-section" id="Mixins">
@@ -332,44 +279,30 @@ body {
 				A mixin lets you make groups of CSS declarations that you want to reuse throughout your site. You can even
 				pass in values to make your mixin more flexible. A good use of a mixin is for vendor prefixes. Here's an
 				example for <code>transform</code>.</p>
-			<div class="">
-				<p>SCSS</p>
-				<pre>
-						<code>
-@mixin transform($property) {
-  -webkit-transform: $property;
-  -ms-transform: $property;
-  transform: $property;
+			<p class="highlighted-block__title">SCSS</p>
+			<pre class="highlighted-block"><code>@mixin transform($property) {
+ -webkit-transform: $property;
+ -ms-transform: $property;
+ transform: $property;
 }
-.box { @include transform(rotate(30deg)); }
-						</code>
-					</pre>
-			</div>
-			<div class="">
-				<p>Sass</p>
-				<pre>
-						<code>
-=transform($property)
-  -webkit-transform: $property
-  -ms-transform: $property
-  transform: $property
-.box
-  +transform(rotate(30deg))
-						</code>
-					</pre>
-			</div>
-			<div class="">
-				<p>CSS</p>
-				<pre>
-						<code>
+
 .box {
-  -webkit-transform: rotate(30deg);
-  -ms-transform: rotate(30deg);
-  transform: rotate(30deg);
-}
-						</code>
-					</pre>
-			</div>
+ @include transform(rotate(30deg));
+}</code></pre>
+			<p class="highlighted-block__title">Sass</p>
+			<pre class="highlighted-block"><code>=transform($property)
+ -webkit-transform: $property
+ -ms-transform: $property
+ transform: $property
+
+.box
+ +transform(rotate(30deg))</code></pre>
+			<p class="highlighted-block__title">CSS</p>
+			<pre class="highlighted-block"><code>.box {
+ -webkit-transform: rotate(30deg);
+ -ms-transform: rotate(30deg);
+ transform: rotate(30deg);
+}</code></pre>
 			<p>To create a mixin you use the <code>@mixin</code> directive and give it a name. We've named our mixin <code>transform</code>.
 				We're also using the variable <code>$property</code> inside the parentheses so we can pass in a transform of
 				whatever we want. After you create your mixin, you can then use it as a CSS declaration starting with <code>@include</code>
@@ -385,106 +318,88 @@ body {
 				create a simple series of messaging for errors, warnings and successes using another feature which goes hand
 				in hand with extend, placeholder classes. A placeholder class is a special type of class that only prints when
 				it is extended, and can help keep your compiled CSS neat and clean.</p>
-			<div class="">
-				<p>SCSS</p>
-				<pre>
-						<code>
-/* This CSS will print because %message-shared is extended. */
+			<p class="highlighted-block__title">SCSS</p>
+			<pre class="highlighted-block"><code>/* This CSS will print because %message-shared is extended. */
+
 %message-shared {
-  border: 1px solid #ccc;
-  padding: 10px;
-  color: #333;
+ border: 1px solid #ccc;
+ padding: 10px;
+ color: #333;
 }
 
 // This CSS won't print because %equal-heights is never extended.
+
 %equal-heights {
-  display: flex;
-  flex-wrap: wrap;
+ display: flex;
+ flex-wrap: wrap;
 }
 
 .message {
-  @extend %message-shared;
+ @extend %message-shared;
 }
 
 .success {
-  @extend %message-shared;
-  border-color: green;
+ @extend %message-shared;
+ border-color: green;
 }
 
 .error {
-  @extend %message-shared;
-  border-color: red;
+ @extend %message-shared;
+ border-color: red;
 }
 
 .warning {
-  @extend %message-shared;
-  border-color: yellow;
-}
-						</code>
-					</pre>
-			</div>
-			<div class="">
-				<p>Sass</p>
-				<pre>
-						<code>
-/* This CSS will print because %message-shared is extended. */
-%message-shared
-  border: 1px solid #ccc
-  padding: 10px
-  color: #333
+ @extend %message-shared;
+ border-color: yellow;
+}</code></pre>
+			<p class="highlighted-block__title">Sass</p>
+			<pre class="highlighted-block"><code>/* This CSS will print because %message-shared is extended. */
 
+%message-shared
+ border: 1px solid #ccc
+ padding: 10px
+ color: #333
 
 // This CSS won't print because %equal-heights is never extended.
-%equal-heights
-  display: flex
-  flex-wrap: wrap
 
+%equal-heights
+ display: flex
+ flex-wrap: wrap
 
 .message
-  @extend %message-shared
-
+ @extend %message-shared
 
 .success
-  @extend %message-shared
-  border-color: green
-
+ @extend %message-shared
+ border-color: green
 
 .error
-  @extend %message-shared
-  border-color: red
-
+ @extend %message-shared
+ border-color: red
 
 .warning
-  @extend %message-shared
-  border-color: yellow
-						</code>
-					</pre>
-			</div>
-			<div class="">
-				<p>CSS</p>
-				<pre>
-						<code>
-/* This CSS will print because %message-shared is extended. */
+ @extend %message-shared
+ border-color: yellow</code></pre>
+			<p class="highlighted-block__title">CSS</p>
+			<pre class="highlighted-block"><code>/* This CSS will print because %message-shared is extended. */
+
 .message, .success, .error, .warning {
-  border: 1px solid #ccc;
-  padding: 10px;
-  color: #333;
+ border: 1px solid #ccc;
+ padding: 10px;
+ color: #333;
 }
 
 .success {
-  border-color: green;
+ border-color: green;
 }
 
 .error {
-  border-color: red;
+ border-color: red;
 }
 
 .warning {
-  border-color: yellow;
-}
-						</code>
-					</pre>
-			</div>
+ border-color: yellow;
+}</code></pre>
 			<p>What the above code does is tells <code>.message</code>, <code>.success</code>, <code>.error</code>, and
 				<code>.warning</code> to behave just like <code>%message-shared</code>. That means anywhere that <code>%message-shared</code>
 				shows up, <code>.message</code>, <code>.success</code>, <code>.error</code> & <code>.warning</code> will too.
@@ -503,65 +418,47 @@ body {
 			<p>Doing math in your CSS is very helpful. Sass has a handful of standard math operators like <code>+</code>,
 				<code>-</code>, <code>*</code>, <code>/</code>, and <code>%</code>. In our example we're going to do some
 				simple math to calculate widths for an <code>aside</code> & <code>article</code>.</p>
-			<div class="">
-				<p>SCSS</p>
-				<pre>
-						<code>
-.container {
-  width: 100%;
+			<p class="highlighted-block__title">SCSS</p>
+			<pre class="highlighted-block"><code>.container {
+ width: 100%;
 }
 
 article[role="main"] {
-  float: left;
-  width: 600px / 960px * 100%;
+ float: left;
+ width: 600px / 960px * 100%;
 }
 
 aside[role="complementary"] {
-  float: right;
-  width: 300px / 960px * 100%;
-}
-						</code>
-					</pre>
-			</div>
-			<div class="">
-				<p>Sass</p>
-				<pre>
-						<code>
-.container
-  width: 100%
+ float: right;
+ width: 300px / 960px * 100%;
+}</code></pre>
+			<p class="highlighted-block__title">Sass</p>
+			<pre class="highlighted-block"><code>.container
+ width: 100%
 
 
 article[role="main"]
-  float: left
-  width: 600px / 960px * 100%
+ float: left
+ width: 600px / 960px * 100%
 
 
 aside[role="complementary"]
-  float: right
-  width: 300px / 960px * 100%
-						</code>
-					</pre>
-			</div>
-			<div class="">
-				<p>CSS</p>
-				<pre>
-						<code>
-.container {
-  width: 100%;
+ float: right
+ width: 300px / 960px * 100%</code></pre>
+			<p class="highlighted-block__title">CSS</p>
+			<pre class="highlighted-block"><code>.container {
+ width: 100%;
 }
 
 article[role="main"] {
-  float: left;
-  width: 62.5%;
+ float: left;
+ width: 62.5%;
 }
 
 aside[role="complementary"] {
-  float: right;
-  width: 31.25%;
-}
-						</code>
-					</pre>
-			</div>
+ float: right;
+ width: 31.25%;
+}</code></pre>
 			<p>We've created a very simple fluid grid, based on 960px. Operations in Sass let us do something like take
 				pixel values and convert them to percentages without much hassle.</p>
 		</article>
