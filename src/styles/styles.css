@@ -9,3 +9,26 @@ html {
   -webkit-box-sizing: inherit;
   box-sizing: inherit;
 }
+
+.fcc-documentation {
+  font-family: "Source Sans Pro", sans-serif;
+  background-color:  #fff;
+  color: #6b717f;
+}
+
+.header {
+  display: flex;
+  background-color: #c69;
+  color: #fff;
+}
+
+.header-logo {
+  display: block;
+  width: 193px;
+  height: 96px;
+  font-size: 0;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("../images/sass-logo.png");
+}
