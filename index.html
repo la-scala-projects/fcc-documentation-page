@@ -10,27 +10,26 @@
 </head>
 <body class="fcc-documentation">
 <header class="page__header">
+	<button class="nav-button nav-button--open">Open / Close menu</button>
 	<a href="https://sass-lang.com" class="page__header-logo">SASS Logo</a>
 	<h1 class="page__main-title">Basics Documentation</h1>
 </header>
-<aside>
-	<nav class="page__navigation" id="navbar">
-		<header class="nav-header">Page navigation</header>
-		<ul class="nav-list">
-			<li class="nav-list__item"><a href="#Introduction" class="nav-link">Introduction</a></li>
-			<li class="nav-list__item"><a href="#Current_Releases" class="nav-link">Current Releases</a></li>
-			<li class="nav-list__item"><a href="#Advantages" class="nav-link">Advantages</a></li>
-			<li class="nav-list__item"><a href="#Preprocessing" class="nav-link">Preprocessing</a></li>
-			<li class="nav-list__item"><a href="#Variables" class="nav-link">Variables</a></li>
-			<li class="nav-list__item"><a href="#Nesting" class="nav-link">Nesting</a></li>
-			<li class="nav-list__item"><a href="#Partials" class="nav-link">Partials</a></li>
-			<li class="nav-list__item"><a href="#Import" class="nav-link">Import</a></li>
-			<li class="nav-list__item"><a href="#Mixins" class="nav-link">Mixins</a></li>
-			<li class="nav-list__item"><a href="#Extend" class="nav-link">Extend</a></li>
-			<li class="nav-list__item"><a href="#Operators" class="nav-link">Operators</a></li>
-		</ul>
-	</nav>
-</aside>
+<nav class="page__navigation" id="navbar">
+	<header class="nav-header">Page navigation</header>
+	<ul class="nav-list">
+		<li class="nav-list__item"><a href="#Introduction" class="nav-link">Introduction</a></li>
+		<li class="nav-list__item"><a href="#Current_Releases" class="nav-link">Current Releases</a></li>
+		<li class="nav-list__item"><a href="#Advantages" class="nav-link">Advantages</a></li>
+		<li class="nav-list__item"><a href="#Preprocessing" class="nav-link">Preprocessing</a></li>
+		<li class="nav-list__item"><a href="#Variables" class="nav-link">Variables</a></li>
+		<li class="nav-list__item"><a href="#Nesting" class="nav-link">Nesting</a></li>
+		<li class="nav-list__item"><a href="#Partials" class="nav-link">Partials</a></li>
+		<li class="nav-list__item"><a href="#Import" class="nav-link">Import</a></li>
+		<li class="nav-list__item"><a href="#Mixins" class="nav-link">Mixins</a></li>
+		<li class="nav-list__item"><a href="#Extend" class="nav-link">Extend</a></li>
+		<li class="nav-list__item"><a href="#Operators" class="nav-link">Operators</a></li>
+	</ul>
+</nav>
 <main class="content" id="main-doc">
 	<section class="main-section" id="Introduction">
 		<header>Introduction</header>
@@ -103,10 +102,10 @@
 				tells Sass to watch your source files for changes, and re-compile CSS each time
 				you save your Sass. If you wanted to watch (instead of manually build) your <code>input.scss</code> file,
 				you'd just add the watch flag to your command, like so:</p>
-				<code class="highlighted-block">sass --watch input.scss output.css</code>
+			<code class="highlighted-block">sass --watch input.scss output.css</code>
 			<p>You can watch and output to directories by using folder paths as your input and output, and separating
 				them with a colon. In this example:</p>
-				<code class="highlighted-block">sass --watch app/sass:public/stylesheets</code>
+			<code class="highlighted-block">sass --watch app/sass:public/stylesheets</code>
 			<p>Sass would watch all files in the <code>app/sass</code> folder for changes, and compile CSS to the <code>public/stylesheets</code>
 				folder.</p>
 		</article>
@@ -431,7 +430,7 @@ article[role="main"] {
 aside[role="complementary"] {
  float: right;
  width: 300px / 960px * 100%;
-}</code></pre>
+				}</code></pre>
 			<p class="highlighted-block__title">Sass</p>
 			<pre class="highlighted-block"><code>.container
  width: 100%
@@ -469,6 +468,7 @@ aside[role="complementary"] {
 		taken from <a href="https://sass-lang.com/guide">Sass official website</a>.</p>
 	<p>&copy; Created by Kristina Kuzmenko, 2019.</p>
 </footer>
+<script src="src/js/scripts.js"></script>
 <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 </body>
 </html>
