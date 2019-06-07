@@ -1,6 +1,6 @@
 var navMenu = document.querySelector('.page__navigation');
 var navButton = document.querySelector('.nav-button');
-var navLink = document.querySelector('.nav-link');
+var navLink = document.querySelectorAll('.nav-link');
 
 navButton.addEventListener('click', menuToggle);
 
@@ -18,13 +18,11 @@ function menuToggle () {
   }
 }
 
-navLink.addEventListener('click', () => {
-  console.log(navLink);
-});
-
-function goToArticle () {
-  navButton.classList.remove('nav-button--close');
-  navButton.classList.add('nav-button--open');
-  navMenu.classList.remove('page__navigation--active');
-  console.log("Success");
-}
+document.querySelector('.nav-list').addEventListener('click', function (event){
+  console.log(event.target.className);
+  if (event.target.className === 'nav-link') {
+    navButton.classList.remove('nav-button--close');
+    navButton.classList.add('nav-button--open');
+    navMenu.classList.remove('page__navigation--active');
+  }
+})
