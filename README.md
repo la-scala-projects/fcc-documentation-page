@@ -3,4 +3,4 @@
 Responsive Web Design Project for FreeCodeCamp (Technical Documentation Page)
 
 Watch online:
-https://tinakuzmenko.github.io/fcc__documentation-page/
+https://tinakuzmenko.github.io/fcc-documentation-page/
